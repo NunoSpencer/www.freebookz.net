@@ -1,0 +1,51 @@
+possibble names:
+- occultbookz.com $8.98/yr
+- freebookz.net $9.98/yr
+
+
+BUGS
+- fix simultaneous expanding sub menus when one is cliked
+- fix menu so its collapsed on start
+- increase side menu horizontal width
+- add hovering collapsible menus
+- add icons for each book category on menu
+- add list of trending books for each topic, on home/index page (if I add a 3rd row list it does not scroll horizontal)
+
+DO:
+- index.html header: 
+	"Freebookz.net is your #1 search engine for FREE PDF files. 
+	As of today we have 79,347,954 eBooks for you to download for free. 
+	No annoying ads, no download limits, enjoy it and don't forget to bookmark and share the love!"
+
+- below header, add simplfied search bar (see template code)
+- create .html page for each category 
+	- will have listing of all books for that category	
+	- each book include: cover img, short description, year of pub, # of pages, download link, userRating, link for book page 
+	- on book page, include: prev information + listing of related books (see template page for book page)
+
+- add picture of ads images below sidebar menu
+
+
+MySQL DATABASE
+- table: "books"
+- schema: 
+	- bookName
+	- bookAuthor
+	- bookISBN (PK)
+	- bookYearOfPublication
+	- bookLanguage
+	- category
+	- dateAdded
+	- userRating
+	- downloadCount
+	- pdfFile
+
+QUERIES:
+- searchBooks 		-(returns book(s) given a search criteria)
+- recentlyAddedBooks	-(returns books that were recently added to DB- 1 day ago, 1 week ago, this month)
+- showDownloadCount	-(returns download count, labeled on the description)
+- thumbUpAdd		-(add thumbUp, labeled on the description)
+- thumbDownAdd		-(add thumbDown, labeled on the description)
+- trendingBooks		-(all books that have had the most thumbsup and downloads in past 5 days)
+- trending_AfroRel	-(books on AfroRel category that have had the most thumbsup and downloads in past 5 days)
+- all_AfroRel		-(return all books on AfroRel category)
