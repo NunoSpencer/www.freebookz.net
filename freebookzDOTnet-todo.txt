@@ -6,25 +6,33 @@ possibble names:
 BUGS
 - fix simultaneous expanding sub menus when one is cliked
 - fix menu so its collapsed on start
-- increase side menu horizontal width
+- reduce side menu horizontal width
 - add hovering collapsible menus
 - add icons for each book category on menu
 - add list of trending books for each topic, on home/index page (if I add a 3rd row list it does not scroll horizontal)
 
 DO:
-- index.html header: 
+- home page header: 
 	"Freebookz.net is your #1 search engine for FREE PDF files. 
 	As of today we have 79,347,954 eBooks for you to download for free. 
 	No annoying ads, no download limits, enjoy it and don't forget to bookmark and share the love!"
 
 - below header, add simplfied search bar (see template code)
-- create .html page for each category 
-	- will have listing of all books for that category	
-	- each book include: cover img, short description, year of pub, # of pages, download link, userRating, link for book page 
-	- on book page, include: prev information + listing of related books (see template page for book page)
+
+- create category.html page for each category
+	- horizontal listing of book - 10 listings per page), 
+	- bottom of page indexed 1 | 2 | 3 | 4 | 5 | ... 13
+	- each book listing include: cover img, short description, year of pub, # of pages, download link, download count, userThumbsUpCount, link for book page 
+	- listing is linked to bookpage.html
+	- hover of cover, display "READE NOW", linking to pdfreader page
+	
+	- bookpage.html include: prev information + listing of related books (see template page for book page)
 
 - add picture of ads images below sidebar menu
-
+- add count of books on each section, ex: 
+	AfroReligion (23)
+	Afterlife (12)
+- html for each category (horizontal listing of books - 10 books per page), indexed 1 | 2 | 3 | 4 | 5 | ... 13
 
 MySQL DATABASE
 - table: "books"
@@ -36,7 +44,7 @@ MySQL DATABASE
 	- bookLanguage
 	- category
 	- dateAdded
-	- userRating
+	- userThumbsUpCount
 	- downloadCount
 	- pdfFile
 
